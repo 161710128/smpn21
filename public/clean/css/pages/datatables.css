@@ -1,0 +1,45 @@
+.m-t-6 {
+    margin-top : 6px;
+}
+.panel {
+    border     : 1px solid #CCC;
+    box-shadow : 0 0 5px #ccc;
+}
+.dataTables_length {
+    margin-top : 10px;
+    margin-left: 20px;
+}
+.table_width {
+    width : 100% !important;
+}
+#mytable td {
+    vertical-align: middle; /*Data Table with Action buttons*/
+}
+.dt-buttons .btn-default{
+    float:left !important;
+}
+@media (max-width: 425px){
+    #table1_wrapper .dt-buttons{
+        margin-left:15px;
+    }
+}
+.dataTables_filter{
+    margin-right: 20px;
+}
+.table > tbody > tr.danger > td{
+
+    background-color: #FF7A7A;
+}
+.dropdown-menu > li > a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-size:14px;
+    font-weight: normal;
+    line-height: 1.428571429;
+    color: #333333;
+    white-space: nowrap;
+}
+table{
+    width:100%;
+}

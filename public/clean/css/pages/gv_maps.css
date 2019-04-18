@@ -1,0 +1,17 @@
+#world-map,#asia-map{
+    width: 100%;
+    height: 300px;
+}
+
+.jvectormap-zoomin,
+.jvectormap-zoomout {
+    padding: 4px 13px 13px 5px;
+}
+@media (min-width:320px) and (max-width:425px){
+    #gmap-types .gm-style div:nth-child(7){
+        margin:10px 1px !important;
+    }
+    #gmap-types .gm-style div:nth-child(11), #gmap-types .gm-style div:nth-child(12){
+        width:132px;
+    }
+}
